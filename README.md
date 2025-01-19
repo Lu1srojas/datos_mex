@@ -1,3 +1,5 @@
+![Logo](logo.png)
+
 # Datos Mex
 
 `datos_mex` es una librería construida en Python con la finalidad de consultar datos públicos de México, para el Api del Banco de México ([Banxico](https://www.banxico.org.mx/SieAPIRest/service/v1/)) y el Instituto Nacional de Estadística  y Geografía ([INEGI](https://www.inegi.org.mx/servicios/api_indicadores.html)) . Estas dos instituciones publican información de la economía real como financiera.
@@ -5,6 +7,25 @@
 `datos_mex` esta construida a partir de `pandas` por lo que las consultas retornadas son `pd.Dataframe()`, teniendo asi integración con otras librerías como `Matplotlib`, `Seaborn` o `Statsmodels`.
 
 ## Tabla de contenidos
+
+```mermaid
+---
+title: Diagrama de Datos Mex
+---
+
+flowchart LR
+    A["Data_mx"] --> B["Banxico"]
+    B --Token del Banco de México --> C["SIE"]
+    A --> D["INEGI"]
+    D -- Token del INEGI --> E["Banco de Indicadores
+    BIE
+    BISE"]
+    A--> F["Auxiliar"]
+    F --> G["rename
+    group_by_time"]
+```
+
+Donde:
 
 * [Banco de México](#api-banco-de-méxico)
   * [SIE](#sistema-de-información-económica-sie): Sistema de Información Económica
@@ -250,7 +271,7 @@ En el SIE principalmente se puede encontrar información financiera como Tasas d
 
 ```python
 ### Token
-from datos_mex.banxico import sie
+from datos_mx.banxico import sie
 tokenbm = 'tu token'
 
 # A partir de esta se realiza la consulta 

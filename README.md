@@ -1,6 +1,17 @@
 ![Logo](logo.png)
 
+# Installacion 
+
+```sh
+pip install datos-mex
+```
+
+
+
 # Datos Mex
+
+[![version](https://img.shields.io/badge/version-1.0.4-success.svg)](#)
+[![PyPI Latest Release](https://img.shields.io/pypi/v/datos-mex.svg)](https://pypi.org/project/datos-mex/)
 
 `datos_mex` es una librería construida en Python con la finalidad de consultar datos públicos de México, para el Api del Banco de México ([Banxico](https://www.banxico.org.mx/SieAPIRest/service/v1/)) y el Instituto Nacional de Estadística  y Geografía ([INEGI](https://www.inegi.org.mx/servicios/api_indicadores.html)) . Estas dos instituciones publican información de la economía real como financiera.
 
